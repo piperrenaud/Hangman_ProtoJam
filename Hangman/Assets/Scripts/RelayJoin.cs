@@ -1,4 +1,3 @@
-using Mono.Cecil.Cil;
 using TMPro;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
@@ -6,6 +5,10 @@ using Unity.Services.Relay;
 using Unity.Services.Relay.Models;
 using UnityEngine;
 using UnityEngine.UI;
+using Unity.Services;
+using Unity.Services.Core;
+using Unity.Services.Authentication;
+using Unity.Services.Core.Environments;
 
 public class RelayJoin : MonoBehaviour
 {
@@ -16,9 +19,39 @@ public class RelayJoin : MonoBehaviour
 
     public string gameSceneName = "Multi";
 
-    private void Start()
+    private async void Start()
     {
-        if (codeInput != null) codeInput.onEndEdit.AddListener(OnInputSubmitted);
+        if (UnityServices.State != ServicesInitializationState.Initialized)
+        {
+            await UnityServices.InitializeAsync(
+                new InitializationOptions().SetEnvironmentName("production"));
+        }
+
+        if (!AuthenticationService.Instance.IsSignedIn)
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        }
+
+        Debug.Log("Player ID: " + AuthenticationService.Instance.PlayerId);
+    }
+
+    public void JoinButtonPressed() 
+    { 
+        string code = codeInput.text.Trim(); 
+        string playerName = nameInput.text.Trim(); 
+        if (string.IsNullOrEmpty(code)) 
+        { 
+            statusText.text = "Enter join code!"; 
+            return; 
+        } 
+        
+        if (string.IsNullOrEmpty(playerName)) 
+        { 
+            statusText.text = "Enter your name!"; 
+            return; 
+        } 
+        
+        JoinRelay(code, playerName); 
     }
 
     void OnInputSubmitted(string code)
@@ -42,12 +75,7 @@ public class RelayJoin : MonoBehaviour
         {
             JoinAllocation alloc = await RelayService.Instance.JoinAllocationAsync(joinCode);
 
-            var unityTransport = NetworkManager.Singleton.NetworkConfig.NetworkTransport as UnityTransport;
-            if (unityTransport == null)
-            {
-                unityTransport = NetworkManager.Singleton.gameObject.AddComponent<UnityTransport>();
-                NetworkManager.Singleton.NetworkConfig.NetworkTransport = unityTransport;
-            }
+            var unityTransport = NetworkManager.Singleton.GetComponent<UnityTransport>();
 
             unityTransport.SetRelayServerData(
             alloc.RelayServer.IpV4,
@@ -77,7 +105,7 @@ public class RelayJoin : MonoBehaviour
         catch (System.Exception ex)
         {
             Debug.LogError("Failed To join relay server: " + ex.Message);
-            if (statusText != null) statusText.text = "Failed to join: " + ex.Message;
+            if (statusText != null) statusText.text = "Failed to join: " + ex;
         }
     }
 }

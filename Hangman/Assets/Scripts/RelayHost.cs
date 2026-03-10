@@ -3,10 +3,10 @@ using Unity.Services.Relay.Models;
 using Unity.Services.Relay;
 using Unity.Netcode;
 using Unity.Netcode.Transports.UTP;
-using System.Diagnostics;
 using TMPro;
 using Unity.Services.Core;
 using Unity.Services.Authentication;
+using Unity.Services.Core.Environments;
 
 public class RelayHost : MonoBehaviour
 {
@@ -19,10 +19,20 @@ public class RelayHost : MonoBehaviour
     
     private async void Start()
     {
-        await UnityServices.InitializeAsync();
-        await AuthenticationService.Instance.SignInAnonymouslyAsync();
-        System.Diagnostics.Debug.WriteLine("Signed in as: " + AuthenticationService.Instance.PlayerId);
-    }
+        if (UnityServices.State != ServicesInitializationState.Initialized)
+        {
+            await UnityServices.InitializeAsync(
+                new InitializationOptions().SetEnvironmentName("production"));
+        }
+
+        if (!AuthenticationService.Instance.IsSignedIn)
+        {
+            await AuthenticationService.Instance.SignInAnonymouslyAsync();
+        }
+
+        Debug.Log("Player ID: " + AuthenticationService.Instance.PlayerId);
+    }   
+
     public async void HostRelay()
     {
         try

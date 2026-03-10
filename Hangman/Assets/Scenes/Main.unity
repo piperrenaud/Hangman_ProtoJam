@@ -340,6 +340,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScrambledWord
   textUI: {fileID: 1314896912}
   easyWords:
+  - Coding
+  - Maya
+  - Unity
+  - Unreal
   - Test
   - Exam
   - Book
@@ -347,10 +351,30 @@ MonoBehaviour:
   - Design
   - Computer
   - Drawing
+  - Game Arts
+  - ScreenWriting
+  - Animation
+  - Photoshop
+  - After Effects
+  - Web Design
+  - Videography
+  - Algorithm
+  - Concept Art
+  - Adaptation
   hardWords:
   - Digital Screen
   - Otakaro
   - Tutorial
+  - Cinematography
+  - Graphic Design
+  - Game Development
+  - Three Dimensional
+  - Screen Sound
+  - Cinematic Arts
+  - Virtual Production
+  - Visual Effects
+  - Postproduction
+  - Multimedia Programming
   chosenWord: 
   currentWords: []
 --- !u!4 &161104696
