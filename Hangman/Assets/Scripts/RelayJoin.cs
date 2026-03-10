@@ -14,7 +14,7 @@ public class RelayJoin : MonoBehaviour
     public TextMeshProUGUI statusText;
     public TMP_InputField nameInput;
 
-    public string gameSceneName = "Main";
+    public string gameSceneName = "Multi";
 
     private void Start()
     {
@@ -59,14 +59,11 @@ public class RelayJoin : MonoBehaviour
 
             NetworkManager.Singleton.OnClientConnectedCallback += (clientId) =>
             {
-                var playerObj = NetworkManager.Singleton.SpawnManager.GetPlayerNetworkObject(clientId);
-                if (playerObj != null)
+                if (clientId == NetworkManager.Singleton.LocalClientId)
                 {
-                    var pd = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject().GetComponent<PlayerData>();
-                    if (pd != null && pd.IsLocalPlayer)
-                    {
-                        pd.playerName = playerName;
-                    }
+                    var playerObj = NetworkManager.Singleton.SpawnManager.GetLocalPlayerObject();
+                    var pd = playerObj.GetComponent<PlayerData>();
+                    pd.SetPlayerNameServerRpc(nameInput.text.Trim());
 
                     NetworkManager.Singleton.SceneManager.LoadScene(gameSceneName, UnityEngine.SceneManagement.LoadSceneMode.Single);
                 }

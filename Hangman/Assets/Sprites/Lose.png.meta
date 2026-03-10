@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: a441827b41bfcfa428f5988e046243fb
+guid: 66a2c8554da6f6d418b55684637cfaab
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1337277570972692813
-    second: Stressed 2_0
+      213: -9044940087047226622
+    second: Lose_0
+  - first:
+      213: -6966489487585567046
+    second: Lose_1
+  - first:
+      213: 5583708099706835710
+    second: Lose_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,23 +106,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stressed 2_0
+      name: Lose_0
       rect:
         serializedVersion: 2
-        x: 972
-        y: 245
-        width: 1511
-        height: 3013
+        x: 1847
+        y: 594
+        width: 517
+        height: 379
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d41bce79dd6fe8210800000000000000
-      internalID: 1337277570972692813
+      spriteID: 20bfbd8b9eae97280800000000000000
+      internalID: -9044940087047226622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lose_1
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 35
+        width: 1939
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe18f898be025f90800000000000000
+      internalID: -6966489487585567046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lose_2
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 41
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef25f74dee05d7d40800000000000000
+      internalID: 5583708099706835710
       vertices: []
       indices: 
       edges: []
@@ -125,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95cf98e7932f22948a34de8bf1713d7a
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Stressed 2_0: 1337277570972692813
+      Lose_0: -9044940087047226622
+      Lose_1: -6966489487585567046
+      Lose_2: 5583708099706835710
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

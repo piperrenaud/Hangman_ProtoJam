@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a441827b41bfcfa428f5988e046243fb
+guid: 1c2a6d321899f9c419a121d1fc71f389
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1337277570972692813
-    second: Stressed 2_0
+      213: -3206075042418440040
+    second: 1000014320_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stressed 2_0
+      name: 1000014320_0
       rect:
         serializedVersion: 2
-        x: 972
-        y: 245
-        width: 1511
-        height: 3013
+        x: 764
+        y: 470
+        width: 1526
+        height: 2758
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d41bce79dd6fe8210800000000000000
-      internalID: 1337277570972692813
+      spriteID: 89847654cbbb183d0800000000000000
+      internalID: -3206075042418440040
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95cf98e7932f22948a34de8bf1713d7a
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Stressed 2_0: 1337277570972692813
+      1000014320_0: -3206075042418440040
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

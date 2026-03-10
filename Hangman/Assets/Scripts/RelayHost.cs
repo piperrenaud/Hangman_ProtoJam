@@ -13,7 +13,7 @@ public class RelayHost : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI joinCodeText;
 
-    public string gameSceneName = "Main";
+    public string gameSceneName = "Multi";
 
     private const int MAX_PLAYERS = 10;
     

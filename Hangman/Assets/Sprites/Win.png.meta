@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: a441827b41bfcfa428f5988e046243fb
+guid: d827c83c7562a48449fe9d095ca198f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1337277570972692813
-    second: Stressed 2_0
+      213: 3302273018506617863
+    second: Win_0
+  - first:
+      213: 954963436607154304
+    second: Win_1
+  - first:
+      213: -4455476159343789129
+    second: Win_2
+  - first:
+      213: 6519960470705124959
+    second: Win_3
+  - first:
+      213: 52362372452818622
+    second: Win_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -100,23 +112,111 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stressed 2_0
+      name: Win_0
       rect:
         serializedVersion: 2
-        x: 972
-        y: 245
-        width: 1511
-        height: 3013
+        x: 880
+        y: 994
+        width: 52
+        height: 49
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d41bce79dd6fe8210800000000000000
-      internalID: 1337277570972692813
+      spriteID: 704a17b60d704dd20800000000000000
+      internalID: 3302273018506617863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_1
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1031
+        width: 134
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088a47c9f26b04d00800000000000000
+      internalID: 954963436607154304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_2
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 968
+        width: 155
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bb77190a08fa22c0800000000000000
+      internalID: -4455476159343789129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_3
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 122
+        width: 1082
+        height: 857
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56b7fdf08d8b7a50800000000000000
+      internalID: 6519960470705124959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_4
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 958
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe95a1ec470ab000800000000000000
+      internalID: 52362372452818622
       vertices: []
       indices: 
       edges: []
@@ -125,7 +225,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95cf98e7932f22948a34de8bf1713d7a
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Stressed 2_0: 1337277570972692813
+      Win_0: 3302273018506617863
+      Win_1: 954963436607154304
+      Win_2: -4455476159343789129
+      Win_3: 6519960470705124959
+      Win_4: 52362372452818622
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
