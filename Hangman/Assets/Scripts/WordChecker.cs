@@ -29,7 +29,7 @@ public class WordChecker : MonoBehaviour
         lives = hearts.Count;
         if (spriteVersions.Count > 0) displayImage.sprite = spriteVersions[0];
 
-        
+
     }
 
     void CheckWord(string playerInput)
@@ -65,7 +65,9 @@ public class WordChecker : MonoBehaviour
     {
         if (lives <= 0) return;
         lives--;
-        hearts[lives].color = Color.white;
+        Color heartColor = Color.white;
+        heartColor.a = 0.4f;
+        hearts[lives].color = heartColor;
 
         if (lives == 0)
         {

@@ -660,7 +660,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -682,11 +688,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: dea3db94-3d27-4731-bb18-3e0e7fb75474
+  cloudProjectId: 98e6edbe-d3f1-4865-8e4d-2f22c14413ac
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Hangman
-  organizationId: piperr04
+  projectName: Scrambled
+  organizationId: piperr2004
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
